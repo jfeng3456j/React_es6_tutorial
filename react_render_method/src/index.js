@@ -1,21 +1,11 @@
-import React from "react";
-import ReactDom from "react-dom/client";
+import React from 'react';
+import ReactDOM from 'react-dom/client'; // For React 18+
+import './index.css'; // Optional: for global styles
+import App from './App'; // Your main application component
 
-const element = (
-  <table>
-    <tr>
-      <th>Name</th>
-      <th>Phone</th>
-    </tr>
-
-    <tr>
-      <td>John Doe</td>
-      <td>314-900-9000</td>
-    </tr>
-  </table>
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
 );
-const root = ReactDom.createRoot(document.getElementById("root"));
-
-//root.render(<p>render react using react dom </p>);
-
-root.render(element);
